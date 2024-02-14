@@ -1,0 +1,36 @@
+
+ChatGPT
+Aquí tienes un ejemplo de cómo podría ser un programa en HTML y JavaScript que cumpla con los requisitos que has proporcionado:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcular Perímetro y Área de un Círculo</title>
+<script>
+    function calcularPerimetroYArea() {
+        // Obtener el valor del radio del input
+        var radio = parseFloat(document.getElementById("radio").value);
+
+        // Calcular el perímetro y el área del círculo
+        var perimetro = 2 * Math.PI * radio;
+        var area = Math.PI * Math.pow(radio, 2);
+
+        // Mostrar los resultados en los elementos de salida
+        document.getElementById("resultadoPerimetro").innerHTML = "Perímetro: " + perimetro.toFixed(1);
+        document.getElementById("resultadoArea").innerHTML = "Área: " + area.toFixed(1);
+    }
+</script>
+</head>
+<body>
+<h2>Calcular Perímetro y Área de un Círculo</h2>
+<label for="radio">Ingrese el radio:</label>
+<input type="number" id="radio" name="radio">
+<button onclick="calcularPerimetroYArea()">Calcular</button>
+<div id="resultadoPerimetro"></div>
+<div id="resultadoArea"></div>
+</body>
+</html>

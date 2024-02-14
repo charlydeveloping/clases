@@ -1,0 +1,27 @@
+<!-- Escriba un programa que pida al usuario que escriba su nombre, y lo salude llamándolo por su nombre.
+
+Ingrese su nombre: Carlos
+Hola, Carlos -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saludo por Nombre</title>
+</head>
+<body>
+  <h1>Saludo por Nombre</h1>
+  <label for="nombreInput">Ingrese su nombre:</label>
+  <input type="text" id="nombreInput">
+  <button onclick="saludar()">Saludar</button>
+  <p id="saludo"></p>
+
+  <script>
+    function saludar() {
+      const nombre = document.getElementById("nombreInput").value;
+      const saludo = `Hola, ${nombre}`;
+      document.getElementById("saludo").textContent = saludo;
+    }
+  </script>
+</body>
+</html>
+
